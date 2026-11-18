@@ -1,35 +1,80 @@
 # 🌽 Terminal de Vendas para Agricultura Familiar (PDV)
 
-**Projeto 04** – Sistema interativo em Python que simula um caixa de feira livre, pensado para pequenos produtores comercializarem produtos como macaxeira, feijão de corda, queijo coalho e rapadura, calculando totais e troco.
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/status-concluído-2e7d32)
+![Projeto](https://img.shields.io/badge/Projeto-04-c0502a)
+
+Sistema interativo em **Python** que simula um **caixa de feira livre**, ideal para pequenos produtores da agricultura familiar comercializarem produtos como **macaxeira, feijão de corda, queijo coalho e rapadura**, calculando totais e troco de forma simples e rápida.
+
+> Projeto desenvolvido para a disciplina de **Introdução à Programação (IP)** – UAST/UFRPE.
+
+---
+
+## 📑 Sumário
+
+- [Funcionalidades](#-funcionalidades)
+- [Como funciona](#-como-funciona)
+- [Estrutura de código](#-estrutura-de-código)
+- [Como executar](#️-como-executar)
+- [Exemplo de uso](#-exemplo-de-uso)
+- [Tratamento de erros](#️-tratamento-de-erros)
+- [Possíveis melhorias](#-possíveis-melhorias)
+- [Tecnologias](#️-tecnologias)
+- [Autores](#-autores)
 
 ---
 
 ## 📋 Funcionalidades
 
-- **Abertura de Caixa:** o sistema carrega um catálogo de produtos disponíveis com seus preços.
+- **Abertura de Caixa:** o sistema carrega um catálogo de produtos disponíveis com seus respectivos preços.
 - **Adição ao Carrinho:** o usuário digita o nome do produto e a quantidade; o sistema calcula o subtotal e adiciona o item ao carrinho.
 - **Checkout e Troco:** o sistema soma tudo, pede o valor pago em dinheiro e calcula o troco, alertando caso o valor seja insuficiente.
 
-## 🧱 Estrutura de Código
+## 🔄 Como funciona
 
-- **Dicionários:** um dicionário para o catálogo (chave: nome do produto, valor: preço) e outro para o carrinho de compras.
-- **Laços de repetição:** um laço `while` mantém a adição de itens ativa até o usuário digitar `Finalizar`.
-- **I/O formatado:** valores monetários exibidos com f-strings formatadas (ex.: `f"R$ {valor:.2f}"`).
+```
+Abrir caixa (carrega catálogo)
+        │
+        ▼
+┌─► Digitar produto ──► "Finalizar"? ──► Sim ──► Checkout
+│        │                                         │
+│        ▼ Não                                     ▼
+│   Digitar quantidade                      Somar total
+│        │                                         │
+│        ▼                                         ▼
+│   Calcular subtotal                       Pedir valor pago
+│        │                                         │
+│        ▼                                         ▼
+└── Adicionar ao carrinho                   Valor suficiente? ─► Calcular troco
+                                                   │
+                                                   ▼ Não
+                                             Alertar e pedir novamente
+```
+
+## 🧱 Estrutura de código
+
+| Conceito | Como foi aplicado |
+|---|---|
+| **Dicionários** | Um para o catálogo (`chave: nome do produto`, `valor: preço`) e outro para o carrinho de compras. |
+| **Laços de repetição** | Um laço `while` mantém a adição de itens ativa até o usuário digitar `Finalizar`. |
+| **I/O formatado** | Valores monetários exibidos com f-strings, ex.: `f"R$ {valor:.2f}"`. |
 
 ## ▶️ Como executar
 
 **Pré-requisito:** [Python 3](https://www.python.org/downloads/) instalado.
 
-1. Clone o repositório ou baixe os arquivos:
-   ```bash
-   git clone <url-do-repositorio>
-   cd <nome-da-pasta>
-   ```
-2. Execute o programa:
-   ```bash
-   python main.py
-   ```
-   > Troque `main.py` pelo nome do seu arquivo, se for diferente.
+```bash
+# 1. Clone o repositório
+git clone <url-do-repositorio>
+
+# 2. Entre na pasta do projeto
+cd <nome-da-pasta>
+
+# 3. Execute o programa
+python main.py
+```
+
+> 💡 Troque `main.py` pelo nome real do seu arquivo, se for diferente.
 
 ## 💡 Exemplo de uso
 
@@ -52,15 +97,32 @@ Valor pago: R$ 50.00
 Troco: R$ x.xx
 ```
 
-> Ajuste os valores e o texto acima de acordo com o seu programa.
+> Substitua os valores acima pela saída real do seu programa.
+
+## ⚠️ Tratamento de erros
+
+- **Produto inexistente:** o sistema avisa que o item não está no catálogo e pede novamente.
+- **Valor pago insuficiente:** o sistema alerta e informa quanto ainda falta.
+
+## 🚀 Possíveis melhorias
+
+- Remover itens do carrinho antes de finalizar.
+- Salvar o histórico de vendas em arquivo.
+- Controle de estoque dos produtos.
+- Cadastro de novos produtos pelo próprio produtor.
 
 ## 🛠️ Tecnologias
 
 - Python 3
 
-## 👤 Autor
+## 👥 Autores
 
-**Desenvolvido por** – Eduardo Moraes, Antonio Salatiel e Amanda Vieira 
-Curso:Sistema de Informação 
-Disciplina: IP-Introdução a Programação  
-UAST-UFRPE, 2026
+| Nome |
+|---|
+| Eduardo Moraes |
+| Antonio Salatiel |
+| Amanda Vieira |
+
+**Curso:** Sistemas de Informação  
+**Disciplina:** IP – Introdução à Programação  
+**Instituição:** UAST – UFRPE, 2026
