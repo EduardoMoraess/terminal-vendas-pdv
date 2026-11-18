@@ -61,5 +61,6 @@ Troco: R$ x.xx
 ## 👤 Autor
 
 **Desenvolvido por** – Eduardo Moraes, Antonio Salatiel e Amanda Vieira 
-Curso: Sistema de Informação /Disciplina: IP-Introdução a Programação  
+Curso:Sistema de Informação 
+Disciplina: IP-Introdução a Programação  
 UAST-UFRPE, 2026
