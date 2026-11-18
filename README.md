@@ -122,6 +122,7 @@ Troco: R$ x.xx
 | Eduardo Moraes |
 | Antonio Salatiel |
 | Amanda Vieira |
+| Thyago Silva|
 
 **Curso:** Sistemas de Informação  
 **Disciplina:** IP – Introdução à Programação  
