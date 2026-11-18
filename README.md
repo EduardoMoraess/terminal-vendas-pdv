@@ -60,4 +60,6 @@ Troco: R$ x.xx
 
 ## 👤 Autor
 
-**Seu Nome** – Curso/Disciplina – Instituição, 2026
+**Desenvolvido por** – Eduardo Moraes, Antonio Salatiel e Amanda Vieira 
+Curso: Sistema de Informação /Disciplina: IP-Introdução a Programação  
+UAST-UFRPE, 2026
