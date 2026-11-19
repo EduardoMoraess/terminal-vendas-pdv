@@ -10,14 +10,14 @@ carrinho = {}
 #Adicionar ao carrinho # Thyago Silva
 #Soma dos valores Eduardo Moraes
 def somar_valores(carrinho):
-    """Retorna o total da compra somando os subtotais do carrinho."""
+    #Retorna o total da compra somando os subtotais do carrinho.
     return round(sum(carrinho.values()), 2)
 
 
 #finalizar_compra() Amanda Vieira
 
 def finalizar_compra(total):
-    #Solicita o pagamento em dinheiro e exibe o troco.
+    #Solicita o pagamento em dinheiro e exibe o troco
     while True:
         try:
             entrada = input("Valor pago em dinheiro (R$): ").replace(",", ".")
