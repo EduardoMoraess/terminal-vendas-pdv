@@ -9,32 +9,38 @@ carrinho = {}
 #Exibir catalogo Antonio Salatiel
 #Adicionar ao carrinho # Thyago Silva
 #Soma dos valores Eduardo Moraes
-def somar_valores():
-    #soma dos valores
-    total = 0
-
-    for subtotal in carrinho.values():
-        total += subtotal
-    return total
+def somar_valores(carrinho):
+    #Retorna o total da compra somando os subtotais do carrinho.
+    return round(sum(carrinho.values()), 2)
 
 
 #finalizar_compra() Amanda Vieira
- while True:
+
+def finalizar_compra(total):
+    #Solicita o pagamento em dinheiro e exibe o troco
+    while True:
         try:
-            valor_pago = float(input("Valor pago em dinheiro (R$): "))
+            entrada = input("Valor pago em dinheiro (R$): ").replace(",", ".")
+            valor_pago = float(entrada)
+
+            if valor_pago <= 0:
+                print("Digite um valor maior que zero.")
+                continue
+
             if valor_pago < total:
-                faltante = total - valor_pago
-                print(f"Valor insuficiente! Faltam R$ {faltante:.2f}.")
-            else:
-                troco = valor_pago - total
-                print ("-" * 45)
-                print (f"Valor Recebido: R$ {valor_pago:.2f}")
-                print (f"Troco  : R$ {troco:.2f}")
-                print ("=" * 45)
-                print ("Venda concluída com sucesso! Volte sempre.")
-                break
+                print(f"Valor insuficiente! Faltam R$ {total - valor_pago:.2f}.")
+                continue
+
+            troco = valor_pago - total
+            print("-" * 45)
+            print(f"Valor Recebido: R$ {valor_pago:.2f}")
+            print(f"Troco         : R$ {troco:.2f}")
+            print("=" * 45)
+            print("Venda concluída com sucesso! Volte sempre.")
+            break
+
         except ValueError:
-                print("Valor inválido! Digite um valor numérico.")
+            print("Valor inválido! Digite um valor numérico.")
 
 
 if __name__ == "__main__":
