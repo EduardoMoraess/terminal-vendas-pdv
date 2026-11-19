@@ -1,3 +1,9 @@
+catalogo = {
+    "macaxeira": 5.20, #preço do Kg
+    "malancia": 3.50, #preço do Kg
+    "rapadura": 2.50 #preço do Kg
+}
+
 carrinho = {}
 
 #Exibir catalogo Antonio Salatiel
@@ -8,7 +14,7 @@ def somar_valores():
     total = 0
 
     for subtotal in carrinho.values():
-        total = subtotal
+        total += subtotal
     return total
 
 
