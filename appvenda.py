@@ -43,5 +43,5 @@ def finalizar_compra(total):
             print("Valor inválido! Digite um valor numérico.")
 
 
-if __name__ == "__main__":
-    iniciar_pdv()
+#if __name__ == "__main__":
+    #iniciar_pdv()
