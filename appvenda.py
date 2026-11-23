@@ -1,6 +1,6 @@
 catalogo = {
     "macaxeira": 5.20,  # preço do Kg
-    "malancia": 3.50,   # preço do Kg
+    "melancia": 3.50,   # preço do Kg
     "rapadura": 2.50,   # preço do Kg
 }
 
