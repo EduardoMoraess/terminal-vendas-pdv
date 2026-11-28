@@ -1,7 +1,7 @@
 catalogo = {
     "macaxeira": 5.20,  # preço do Kg
-    "melancia": 3.50,   # preço do Kg
-    "rapadura": 2.50,   # preço do Kg
+    "melancia": 3.50,  # preço do Kg
+    "rapadura": 2.50,  # preço do Kg
 }
 
 
@@ -30,9 +30,7 @@ class Carrinho:
             return
 
         try:
-            quantidade = float(
-                input("Digite a quantidade em Kg: ").replace(",", ".")
-            )
+            quantidade = float(input("Digite a quantidade em Kg: ").replace(",", "."))
         except ValueError:
             print("Quantidade inválida! Digite um número.")
             return
@@ -60,19 +58,21 @@ class Carrinho:
             sub = qtd * self.catalogo[produto]
             print(f"{produto.capitalize():<15} {qtd:>6.2f} Kg   R$ {sub:>7.2f}")
         print("-" * 45)
-        print(f"{'TOTAL':<15} {'':>10}   R$ {somar_valores(self.obter_subtotais()):>7.2f}")
+        print(
+            f"{'TOTAL':<15} {'':>10}   R$ {somar_valores(self.obter_subtotais()):>7.2f}"
+        )
         print("=" * 45)
 
 
 # Soma dos valores - Eduardo Moraes
 def somar_valores(subtotais):
-    #Retorna o total da compra somando os subtotais.
+    # Retorna o total da compra somando os subtotais.
     return round(sum(subtotais.values()), 2)
 
 
 # Finalizar compra - Amanda Vieira
 def finalizar_compra(total):
-    #Solicita o pagamento em dinheiro e exibe o troco.
+    # Solicita o pagamento em dinheiro e exibe o troco.
     print(f"\nTotal a pagar: R$ {total:.2f}")
     while True:
         try:
